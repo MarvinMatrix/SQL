@@ -1,0 +1,28 @@
+# Wrote a query that orders the items by price.
+
+SELECT item_name, price
+FROM superstore
+ORDER BY price;
+
+# Wrote my own SQL query that will show average about the item prices.
+
+SELECT AVG(price) AS avg_price
+FROM superstore;
+
+
+SELECT COUNT(stock_quantity) 
+FROM superstore
+WHERE 'kitchen Supplies'>34;
+
+
+SELECT *
+FROM superstore
+WHERE category = 'Kitchen Supplies' AND price > 20;
+
+
+# Wrote query that shows what is the highest rated item that sells the least
+
+SELECT item_name, average_rating, stock_quantity
+FROM superstore
+WHERE average_rating >4 AND stock_quantity <50
+ORDER BY stock_quantity DESC;
